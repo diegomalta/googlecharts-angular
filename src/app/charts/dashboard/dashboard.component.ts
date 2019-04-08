@@ -9,11 +9,14 @@ import { PieChartConfig } from '../models/piechart.config';
 
 export class DashboardComponent implements OnInit {
 
-  title = 'Pie Chart Sample';
+  title = 'Google Chart Sample';
 
   data: any[];
   config: PieChartConfig;
   elementId: String;
+
+  config1: PieChartConfig;
+  elementId1: String;
 
   constructor() { }
 
@@ -29,8 +32,12 @@ export class DashboardComponent implements OnInit {
         ['Friday', 8],
         ['Saturday', 10]];
     
-        this.config = new PieChartConfig('Chart description', 0.4);
+        this.config = new PieChartConfig('First Chart description', 0.4);
         this.elementId = 'myPieChart';
+        
+        // second chart
+        this.config1 = new PieChartConfig('Second Chart description', 0.1);
+        this.elementId1 = 'myPieChar1'
   }
 
 }

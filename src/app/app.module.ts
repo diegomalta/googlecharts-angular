@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+//flexlayout
+import { FlexLayoutModule } from "@angular/flex-layout"
+
 import { DashboardComponent } from './charts/dashboard/dashboard.component';
 import { PieChartComponent } from './charts/dashboard/chats/piechart.component';
 
@@ -15,7 +18,8 @@ import { GooglePieChartService } from './charts/services/google-pie-chart.servic
     PieChartComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FlexLayoutModule
   ],
   providers: [GoogleChartsBaseService,GooglePieChartService],
   bootstrap: [AppComponent]
