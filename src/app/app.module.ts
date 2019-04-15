@@ -6,22 +6,24 @@ import { AppComponent } from './app.component';
 import { FlexLayoutModule } from "@angular/flex-layout"
 
 import { DashboardComponent } from './charts/dashboard/dashboard.component';
-import { PieChartComponent } from './charts/dashboard/chats/piechart.component';
+import { PieChartComponent } from './charts/dashboard/chats/piechart/piechart.component';
+import { BarChartComponent } from './charts/dashboard/chats/barchart/barchart.component';
 
-import { GoogleChartsBaseService } from './charts/services/google-charts.base.service';
-import { GooglePieChartService } from './charts/services/google-pie-chart.service';
+import { GoogleChartsBaseService } from './charts/services/charts/google-charts.base.service';
+import { GoogleChartService } from './charts/services/charts/google-chart.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    PieChartComponent
+    PieChartComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,
     FlexLayoutModule
   ],
-  providers: [GoogleChartsBaseService,GooglePieChartService],
+  providers: [GoogleChartsBaseService,GoogleChartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

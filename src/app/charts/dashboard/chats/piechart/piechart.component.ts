@@ -1,8 +1,8 @@
 
 import { Component, Input, OnInit } from '@angular/core';
 
-import { GooglePieChartService } from './../../services/google-pie-chart.service';
-import { PieChartConfig } from '../../models/piechart.config';
+import { GoogleChartService } from '../../../services/charts/google-chart.service';
+import { PieChartConfig } from '../../../models/charts.config';
 
 declare var google: any;
 
@@ -16,7 +16,7 @@ export class PieChartComponent implements OnInit {
     @Input() config: PieChartConfig;
     @Input() elementId: string;
 
-    constructor(private _pieChartService: GooglePieChartService) {}
+    constructor(private _pieChartService: GoogleChartService) {}
 
     ngOnInit(): void {
         this._pieChartService.BuildPieChart(this.elementId, this.data, this.config); 

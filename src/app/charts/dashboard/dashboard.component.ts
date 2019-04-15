@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PieChartConfig } from '../models/piechart.config';
+import { PieChartConfig, BarChartConfig } from '../models/charts.config';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,6 +17,9 @@ export class DashboardComponent implements OnInit {
 
   config1: PieChartConfig;
   elementId1: String;
+  
+  config2: BarChartConfig;
+  elementId2: String;
 
   constructor() { }
 
@@ -38,6 +41,16 @@ export class DashboardComponent implements OnInit {
         // second chart
         this.config1 = new PieChartConfig('Second Chart description', 0.1);
         this.elementId1 = 'myPieChar1'
+
+        // third char
+        var hAxis = {
+          title: 'Day of week',
+        };
+        var vAxis = {
+          title: 'Hours',
+        };
+        this.config2 = new BarChartConfig('Third Chart description', hAxis, vAxis);
+        this.elementId2 = 'myPieChar2'
   }
 
 }
