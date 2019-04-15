@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/95b804ae-28ec-4123-8610-9bc80771478e/resourceGroups/googlecharts-angular/providers/Microsoft.Web/sites/googlecharts-angular",
-    "appService.deploySubpath": ""
-}
